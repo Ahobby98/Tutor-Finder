@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Tutor application</string>
+    <string name="day_of_week">Monday</string>
+    <string name="time_1">12:30</string>
+    <string name="time_2">3:30</string>
+    <string name="time_3">5:00</string>
+    <string name="time_4">7:30</string>
+    <string name="tutor_button">Tutor</string>
+    <string name="student_button">Student</string>
+    <string name="cs1331">CS1331</string>
+    <string name="cs1332">CS1332</string>
+    <string name="abrar">Abrar Awal</string>
+    <string name="select_class_text">Please select a class:</string>
+    <string name="select_tutor_text">Please select a tutor:</string>
+</resources>
