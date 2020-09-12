@@ -3,13 +3,20 @@
     package="com.example.tutorapplication">
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".MyApplication"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".LinksPage"
+            android:parentActivityName=".HomeScreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeScreen" />
+        </activity>
         <activity
             android:name=".TutorTimeSelect"
             android:parentActivityName=".HomeScreen">
