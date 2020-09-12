@@ -22,6 +22,7 @@ public class StudTimeSelect extends AppCompatActivity {
         final Button b2 = findViewById(R.id.button2);
         final Button b3 = findViewById(R.id.button3);
         final Button submit = findViewById(R.id.submitButton);
+        final Button linksButton1 = findViewById(R.id.linksButton1);
 
         if(timesScheduled[0]) {
             b0.setBackgroundResource(R.drawable.my_button_bg_final);
@@ -105,6 +106,15 @@ public class StudTimeSelect extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), HomeScreen.class);
+                startActivityForResult(myIntent, 0);
+            }
+        });
+
+        //links button
+        linksButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(view.getContext(), LinksPage.class);
                 startActivityForResult(myIntent, 0);
             }
         });

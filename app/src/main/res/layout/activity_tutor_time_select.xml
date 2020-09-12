@@ -20,8 +20,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.037" />
 
+    <Button
+        android:id="@+id/linksButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/my_button_bg_other"
+        android:text="@string/links"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout2"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TableLayout
 
+        android:id="@+id/tableLayout2"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="16dp"
