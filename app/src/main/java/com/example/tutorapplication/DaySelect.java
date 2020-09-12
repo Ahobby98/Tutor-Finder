@@ -1,27 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".DaySelect"
-    tools:ignore="MissingDefaultResource">
+package com.example.tutorapplication;
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+import androidx.appcompat.app.AppCompatActivity;
 
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        tools:ignore="MissingConstraints" />
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+import static com.example.tutorapplication.R.id.spinner1;
+
+public class DaySelect extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_day_select);
+
+        Spinner mySpinner = (Spinner) findViewById(spinner1);
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(DaySelect.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.day));
+        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mySpinner.setAdapter(myAdapter);
+    }
+
+}
