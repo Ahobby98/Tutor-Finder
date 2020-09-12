@@ -11,13 +11,23 @@ public class HomeScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
 
-        Button next = findViewById(R.id.tutButton);
-        next.setOnClickListener(new View.OnClickListener() {
+        Button tutorOnwards = findViewById(R.id.studButton);
+        tutorOnwards.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), StudClassSelect.class);
+                startActivityForResult(myIntent, 0);
+            }
+
+        });
+
+        Button tutButton = findViewById(R.id.tutButton);
+        tutButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent myIntent = new Intent(view.getContext(), TutorTimeSelect.class);
                 startActivityForResult(myIntent, 0);
             }
 

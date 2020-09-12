@@ -22,7 +22,6 @@
 
     <TableLayout
 
-        android:id="@+id/tableLayout"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="16dp"
@@ -47,7 +46,7 @@
             >
 
             <Button
-                android:id="@+id/button0"
+                android:id="@+id/tutButton0"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -68,7 +67,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/tutButton1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -91,7 +90,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/tutButton2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -113,7 +112,7 @@
             android:gravity="center">
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/tutButton3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_column="0"
@@ -128,16 +127,5 @@
         </TableRow>
 
     </TableLayout>
-
-    <Button
-        android:id="@+id/submitButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/my_button_bg_other"
-        android:text="@string/submit_key"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
-        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

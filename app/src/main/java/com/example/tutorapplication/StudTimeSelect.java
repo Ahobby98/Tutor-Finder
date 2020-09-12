@@ -2,13 +2,14 @@ package com.example.tutorapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class StudTimeSelect extends AppCompatActivity {
+import static com.example.tutorapplication.MyApplication.timesScheduled;
 
-    Boolean[] timesScheduled = {false, false, false, false};
+public class StudTimeSelect extends AppCompatActivity {
 
 
     @Override
@@ -16,9 +17,26 @@ public class StudTimeSelect extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stud_time_select);
 
+        final Button b0 = findViewById(R.id.button0);
+        final Button b1 = findViewById(R.id.button1);
+        final Button b2 = findViewById(R.id.button2);
+        final Button b3 = findViewById(R.id.button3);
+        final Button submit = findViewById(R.id.submitButton);
+
+        if(timesScheduled[0]) {
+            b0.setBackgroundResource(R.drawable.my_button_bg_final);
+        }
+        if(timesScheduled[1]) {
+            b1.setBackgroundResource(R.drawable.my_button_bg_final);
+        }
+        if(timesScheduled[2]) {
+            b2.setBackgroundResource(R.drawable.my_button_bg_final);
+        }
+        if(timesScheduled[3]) {
+            b3.setBackgroundResource(R.drawable.my_button_bg_final);
+        }
 
         //time 0
-        final Button b0 = findViewById(R.id.button0);
         b0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -35,7 +53,6 @@ public class StudTimeSelect extends AppCompatActivity {
         });
 
         //time 1
-        final Button b1 = findViewById(R.id.button1);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,7 +69,6 @@ public class StudTimeSelect extends AppCompatActivity {
         });
 
         //time 2
-        final Button b2 = findViewById(R.id.button2);
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,7 +85,6 @@ public class StudTimeSelect extends AppCompatActivity {
         });
 
         //time 3
-        final Button b3 = findViewById(R.id.button3);
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -82,6 +97,15 @@ public class StudTimeSelect extends AppCompatActivity {
                     b3.setBackgroundResource(R.drawable.my_button_bg);
                     timesScheduled[3] = false;
                 }
+            }
+        });
+
+        //submit button
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(view.getContext(), HomeScreen.class);
+                startActivityForResult(myIntent, 0);
             }
         });
 

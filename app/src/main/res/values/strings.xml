@@ -12,4 +12,5 @@
     <string name="abrar">Abrar Awal</string>
     <string name="select_class_text">Please select a class:</string>
     <string name="select_tutor_text">Please select a tutor:</string>
+    <string name="submit_key">Submit</string>
 </resources>
