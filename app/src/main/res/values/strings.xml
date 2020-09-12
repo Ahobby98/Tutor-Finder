@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tutor application</string>
+    <string name="app_name">TutorTech</string>
     <string name="day_of_week">Monday</string>
     <string name="time_1">12:30</string>
     <string name="time_2">3:30</string>
@@ -26,4 +26,5 @@
     <string name="links">Links</string>
     <string name="bluejeans_1">bluejeans.com/3872498855</string>
     <string name="select_day_text">Please select a day:</string>
+    <string name="welcome_message">Welcome to Tutor Tech!</string>
 </resources>
