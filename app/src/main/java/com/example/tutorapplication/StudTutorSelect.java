@@ -17,7 +17,7 @@ public class StudTutorSelect extends AppCompatActivity {
         Button next = findViewById(R.id.abrarButton);
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), StudTimeSelect.class);
+                Intent myIntent = new Intent(view.getContext(), StudDaySelect.class);
                 startActivityForResult(myIntent, 0);
             }
 

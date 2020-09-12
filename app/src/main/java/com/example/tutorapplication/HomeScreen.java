@@ -27,7 +27,7 @@ public class HomeScreen extends AppCompatActivity {
         Button tutButton = findViewById(R.id.tutButton);
         tutButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), TutorTimeSelect.class);
+                Intent myIntent = new Intent(view.getContext(), TutorDaySelect.class);
                 startActivityForResult(myIntent, 0);
             }
 

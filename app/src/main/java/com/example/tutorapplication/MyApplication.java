@@ -5,4 +5,6 @@ import android.app.Application;
 public class MyApplication extends Application {
 
     public static Boolean[] timesScheduled = {false, false, false, false}; //for use in future subclasses
+    public static String selectedDayStudent = "";
+    public static String selectedDayTutor = "";
 }
